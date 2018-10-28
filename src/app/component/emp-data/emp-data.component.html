@@ -1,0 +1,47 @@
+
+<!-- <h2>My Heroes</h2>
+<ul class="employees">
+  <li *ngFor="let employee of employees">
+    <a routerLink="/detail/{{employee.id}}">
+      <span class="badge">{{employee.id}}</span> {{employee.name}}
+    </a>
+  </li>
+</ul> -->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div id="PricingTab">
+<div class="container">
+    <h3>EMPLOYEE DETAILS</h3>
+    
+   
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">Employees</h3>
+                
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="id" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="name" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="skills" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="rating" disabled></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr *ngFor="let employee of employees" routerLink="/detail/{{employee.id}}">
+                      <td>{{employee.id}}</td>
+                      <td>{{employee.name}}</td>
+                      <td>{{employee.skills}}</td>
+                      <td>{{employee.rating}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div> 
